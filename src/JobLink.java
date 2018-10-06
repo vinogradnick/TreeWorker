@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * @class Связь работ РАБОТА ДО-РАБОТА ПОСЛЕ
  */
 class JobLink {
-    String Name;
-    String Next;
+    public String Name;
+    public String Next;
 
     /**
      * Конструктор с параметрами для чтения
