@@ -1,39 +1,19 @@
 import java.util.ArrayList;
 
 /**
- * @class Работа
+ * @class Связь работ РАБОТА ДО-РАБОТА ПОСЛЕ
  */
 class JobLink {
     String Name;
-    String Next_work;
-
+    String Next;
 
     /**
      * Конструктор с параметрами для чтения
      * @param name Название работы
      * @param next Следующая работа
 \     */
-    public JobLink(String name, String next, int priority){
+    public JobLink(String name, String next){
         Name=name;
-        Next_work=next;
-        this.priority=priority;
-        children= new ArrayList<>();
+        Next=next;
     }
-
-    /**
-     * Добавление дочерней работы в список
-     * @param work Название работы для добавления
-     */
-    public void addChildren(String work){
-        children.add(work);
-    }
-
-    /**
-     * Установка приоритета на работу
-     * @param value значение приоритета
-     */
-    public void setPriority(int value){
-        priority=value;
-    }
-
 }
