@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class WorkManager {
-    static WorkReader reader = new WorkReader();
+    static FileReader reader = new FileReader();
 
     static void getGant(ArrayList<JobLink> priorizedJobLinks, int countWorkers){
         ArrayList<JobLink> gantDiagram=new ArrayList<>();
