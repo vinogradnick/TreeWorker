@@ -14,13 +14,14 @@ public class GanttTool {
             }
 
             if(areAllParentsDone(jobs.get(index).parents, done)){
-                if (isTimeOk(jobs.get(index).parents, diagram, time)){
-                    diagram.add(new GanttEntity(jobs.get(index).Name, time, worker++));
-                    done.add(jobs.get(index).Name);
-                    jobs.remove(index);
-                    index = 0;
+                if (!isTimeOk(jobs.get(index).parents, diagram, time)){
+                   time += 1;
+                   worker = 1;
                 }
-
+                diagram.add(new GanttEntity(jobs.get(index).Name, worker++, time));
+                done.add(jobs.get(index).Name);
+                jobs.remove(index);
+                index = 0;
             }
             else {
                 index += 1;
